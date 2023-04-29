@@ -22,6 +22,7 @@ checkButton.addEventListener('click', function () {
   } else if (guess === secretNumber) {
     displayMessage('🏆 Correct, you won!');
     body.style.backgroundColor = '#60b347';
+    numberField.textContent = secretNumber;
     numberField.style.width = '30rem';
     if (score > highscore) {
       highscore = score;
