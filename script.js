@@ -15,7 +15,7 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-checkButton.addEventListener('click', function () {
+const checkUserGuess = function () {
   let guess = Number(document.querySelector('.guess').value);
   if (!guess) {
     displayMessage('🔢 Not a valid Number!');
@@ -37,13 +37,14 @@ checkButton.addEventListener('click', function () {
     } else {
       displayMessage('😩 You lose. Try again');
       body.style.backgroundColor = '#c10420';
+      numberField.textContent = secretNumber;
       score = 0;
       scoreField.textContent = score;
     }
   }
-});
+};
 
-againButton.addEventListener('click', function () {
+const startGameAgain = function () {
   score = 20;
   body.style.backgroundColor = '#222';
   numberField.style.width = '15rem';
@@ -54,4 +55,8 @@ againButton.addEventListener('click', function () {
 
   numberField.textContent = '?';
   document.querySelector('.guess').value = '';
-});
+};
+
+checkButton.addEventListener('click', checkUserGuess);
+
+againButton.addEventListener('click', startGameAgain);
