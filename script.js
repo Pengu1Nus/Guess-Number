@@ -28,6 +28,7 @@ checkButton.addEventListener('click', function () {
       highscore = score;
       highscoreField.textContent = highscore;
     }
+    return;
   } else if (guess !== secretNumber) {
     if (score > 1) {
       displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
@@ -35,6 +36,7 @@ checkButton.addEventListener('click', function () {
       scoreField.textContent = score;
     } else {
       displayMessage('😩 You lose. Try again');
+      body.style.backgroundColor = '#c10420';
       score = 0;
       scoreField.textContent = score;
     }
