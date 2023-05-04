@@ -9,24 +9,33 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media (max-width: 800px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 40%;
+  }
 }
 
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
+  transition: all 1s;
   /* background-color: #60b347; */
 }
 
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  height: 40vh;
   border-bottom: 7px solid #eee;
 }
 
 main {
-  height: 65vh;
+  height: 60vh;
   color: #eee;
   display: flex;
   align-items: center;
@@ -43,6 +52,11 @@ main {
 .right {
   width: 52rem;
   font-size: 2rem;
+  line-height: 160%;
+
+  @media (max-width: 520px) {
+    text-align: center;
+  }
 }
 
 /* ELEMENTS STYLE */
@@ -93,6 +107,10 @@ h1 {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+
+  @media (max-width: 520px) {
+    width: 20rem;
+  }
 }
 
 .btn {
@@ -116,4 +134,8 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+
+  @media (max-width: 520px) {
+    margin-bottom: 4rem;
+  }
 }
